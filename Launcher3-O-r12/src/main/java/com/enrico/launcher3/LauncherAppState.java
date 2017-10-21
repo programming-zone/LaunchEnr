@@ -20,6 +20,7 @@ import android.content.ContentProviderClient;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Looper;
 
 import com.enrico.launcher3.compat.LauncherAppsCompat;
@@ -151,9 +152,20 @@ public class LauncherAppState {
     }
 
     private static LauncherProvider getLocalProvider(Context context) {
-        try (ContentProviderClient cl = context.getContentResolver()
-                .acquireContentProviderClient(LauncherProvider.AUTHORITY)) {
-            return (LauncherProvider) cl.getLocalContentProvider();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            try (ContentProviderClient cl = context.getContentResolver()
+                    .acquireContentProviderClient(LauncherProvider.AUTHORITY)) {
+                return (LauncherProvider) cl.getLocalContentProvider();
+            }
+        } else {
+            ContentProviderClient cl = context.getContentResolver()
+                    .acquireContentProviderClient(LauncherProvider.AUTHORITY);
+            LauncherProvider ret = null;
+            if (cl != null) {
+                ret = (LauncherProvider) cl.getLocalContentProvider();
+                cl.release();
+            }
+            return ret;
         }
     }
 }
