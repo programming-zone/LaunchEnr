@@ -1,5 +1,11 @@
 # LaunchEnr
 
+
+**NOTE: The App is now DEPRECATED do to the lack of time (in everyday life I'm a Chemist)
+If You're a Launcher developer You are free to kang any feature You like from this launcher (board, etc).
+I would be very happy**
+
+
 ![ScreenShot](https://raw.githubusercontent.com/enricocid/LaunchEnr/master/ic_launcher_home.png)
 
 Features:
