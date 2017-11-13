@@ -11,7 +11,7 @@ I would be very happy**
 Features:
 
 - Dark and light theme and many material accents!;
-- Icon packs support (credits to Evervolv Rom);
+- Icon packs support (credits to Evervolv Rom / Lawnchair / @deletescape);
 - Per-app icons (credits to aospa, just revised);
 - Custom labels;
 - Hidden app
