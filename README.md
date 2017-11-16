@@ -1,7 +1,7 @@
 # LaunchEnr
 
 
-**NOTE: The App is now DEPRECATED do to the lack of time (in everyday life I'm a Chemist)
+**NOTE: The App is now DEPRECATED due to the lack of time (in everyday life I'm a Chemist)
 If You're a Launcher developer You are free to kang any feature You like from this launcher (board, etc).
 I would be very happy**
 
